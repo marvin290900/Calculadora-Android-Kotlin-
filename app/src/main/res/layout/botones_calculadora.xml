@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="6">
+
+        <Button
+            android:id="@+id/button_porcentaje"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+
+            android:layout_margin="3dp"
+            android:onClick="cambiarOperador"
+            android:text="%"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button_borraElemento"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+
+            android:layout_margin="3dp"
+            android:onClick="borrar"
+            android:text="CE"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button_borraTodo"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+
+            android:layout_margin="3dp"
+            android:onClick="borrar"
+            android:text="C"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button_entreUno"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+
+            android:layout_margin="3dp"
+            android:onClick="cambiarOperador"
+            android:text="1/x"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button_elevadoAlCuadrado"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+
+            android:layout_margin="3dp"
+            android:onClick="cambiarOperador"
+            android:text="x²"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button_raizCuadrada"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+
+            android:layout_margin="3dp"
+            android:onClick="cambiarOperador"
+            android:text="√x"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button_borraDigito"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+
+            android:layout_margin="3dp"
+            android:onClick="borrar"
+            android:text="⌫"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button_division"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+
+            android:onClick="cambiarOperador"
+            android:text="÷"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button_multiplicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+
+            android:onClick="cambiarOperador"
+            android:text="x"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button_resta"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+
+            android:layout_margin="3dp"
+            android:onClick="cambiarOperador"
+            android:text="-"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button_suma"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="4"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+
+            android:layout_margin="3dp"
+            android:text="+"
+            android:textSize="24sp"
+            android:onClick="cambiarOperador" />
+
+        <Button
+            android:id="@+id/button_igual"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="5"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#03DAC5"
+            android:layout_margin="3dp"
+            android:onClick="igual"
+            android:text="="
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button_numero7"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+
+            android:onClick="seleccionarNumero"
+            android:text="7"
+            android:textColor="#673AB7"
+            android:textSize="24sp"
+            app:strokeColor="#673AB7"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/button_numero8"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+
+            android:onClick="seleccionarNumero"
+            android:text="8"
+            android:textColor="#673AB7"
+            android:textSize="24sp"
+            app:strokeColor="#673AB7"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/button_numero9"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+
+            android:onClick="seleccionarNumero"
+            android:text="9"
+            android:textColor="#673AB7"
+            android:textSize="24sp"
+            app:strokeColor="#673AB7"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/button_numero4"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+
+            android:onClick="seleccionarNumero"
+            android:text="4"
+            android:textColor="#673AB7"
+            android:textSize="24sp"
+            app:strokeColor="#673AB7"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/button_numero5"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+
+            android:onClick="seleccionarNumero"
+            android:text="5"
+            android:textColor="#673AB7"
+            android:textSize="24sp"
+            app:strokeColor="#673AB7"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/button_numero6"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+
+            android:onClick="seleccionarNumero"
+            android:text="6"
+            android:textColor="#673AB7"
+            android:textSize="24sp"
+            app:strokeColor="#673AB7"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/button_numero1"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+
+            android:onClick="seleccionarNumero"
+            android:text="1"
+            android:textColor="#673AB7"
+            android:textSize="24sp"
+            app:strokeColor="#673AB7"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/button_numero2"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+
+            android:onClick="seleccionarNumero"
+            android:text="2"
+            android:textColor="#673AB7"
+            android:textSize="24sp"
+            app:strokeColor="#673AB7"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/button_numero3"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+
+            android:onClick="seleccionarNumero"
+            android:text="3"
+            android:textColor="#673AB7"
+            android:textSize="24sp"
+            app:strokeColor="#673AB7"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/button_cambiarSigno"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+
+            android:onClick="cambiarOperador"
+            android:text="+/-"
+            android:textColor="#673AB7"
+            android:textSize="24sp"
+            app:strokeColor="#673AB7"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/button_numero0"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+
+            android:onClick="seleccionarNumero"
+            android:text="0"
+            android:textColor="#673AB7"
+            android:textSize="24sp"
+            app:strokeColor="#673AB7"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/button_puntoDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_row="5"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+
+            android:onClick="seleccionarNumero"
+            android:text="."
+            android:textColor="#673AB7"
+            android:textSize="24sp"
+            app:strokeColor="#673AB7"
+            app:strokeWidth="1dp" />
+
+    </GridLayout>
+
+</LinearLayout>
